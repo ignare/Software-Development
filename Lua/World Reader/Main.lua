@@ -41,7 +41,7 @@ function love.load()
 	for x = 1, 100 do
 		for y = 1, 100 do
 			local voxel = {}
-			voxel.size = 20
+			voxel.size = 2
 			voxel.x, voxel.y = x * voxel.size, y * voxel.size
 			voxel.red, voxel.green, voxel.blue, voxel.alpha = x * 1, y * 2, x * 3, 255
 			table.insert(onScreen, voxel)
