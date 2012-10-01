@@ -34,24 +34,19 @@ the more organir portions of the game.
 
 
 function love.load()
-	--voxelSize = 10
-	--voxel = {}
-	--voxel.size, voxel.x, voxel.y = 10, 0, 0 
-	--voxel.red, voxel.green, voxel.blue, voxel.alpha = 0, 0, 0, 0
 
-
-	--love.filesystem.read(world.rw)
 	onScreen = {}
 	
 
-	for i = 1, 100 do
-		local voxel = {}
-		voxel.size = 20
-		voxel.x, voxel.y = i * voxel.size, i * voxel.size
-		voxel.red, voxel.green, voxel.blue, voxel.alpha = i * 1, i * 2, i * 3, 255
-		table.insert(onScreen, voxel)
+	for x = 1, 100 do
+		for y = 1, 100 do
+			local voxel = {}
+			voxel.size = 20
+			voxel.x, voxel.y = x * voxel.size, y * voxel.size
+			voxel.red, voxel.green, voxel.blue, voxel.alpha = x * 1, y * 2, x * 3, 255
+			table.insert(onScreen, voxel)
+		end
 	end
-
 end
 
 function love.update(dt)
